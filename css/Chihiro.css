@@ -157,20 +157,53 @@ header {
     text-align: center;
 }
 
-/* Hero Section - Version sans effet bleuté */
+/* Hero Section */
 .hero {
     height: 90vh;
-    background: url('https://png.pngtree.com/background/20230516/original/pngtree-chinese-restaurant-inside-with-many-asian-lanterns-on-the-walls-picture-image_2601801.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
     position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://png.pngtree.com/background/20230516/original/pngtree-chinese-restaurant-inside-with-many-asian-lanterns-on-the-walls-picture-image_2601801.jpg') no-repeat center center/cover;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.iphone-map {
+    width: 300px;
+    height: 500px;
+    position: relative;
+    margin-right: 50px;
+}
+
+.iphone-frame {
+    width: 100%;
+    height: 100%;
+    background: #f9f5f0;
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: 0 0 0 10px #090909, 
+                0 0 0 12px #D4AF37,
+                0 20px 50px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.iphone-frame iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
 }
 
 .hero-content {
-    max-width: 800px;
-    padding: 0 2rem;
+    max-width: 600px;
+    text-align: left;
 }
 
 .hero-content h2 {
@@ -185,7 +218,6 @@ header {
 
 .hero-buttons {
     display: flex;
-    justify-content: center;
     gap: 1.5rem;
     margin-top: 2rem;
 }
@@ -359,6 +391,22 @@ footer {
         display: block;
     }
 
+    .hero-container {
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+
+    .iphone-map {
+        width: 250px;
+        height: 400px;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
     .hero-content h2 {
         font-size: 2.2rem;
     }
@@ -389,5 +437,10 @@ footer {
 
     .restaurant-info h1 {
         font-size: 2rem;
+    }
+
+    .iphone-map {
+        width: 200px;
+        height: 350px;
     }
 }
