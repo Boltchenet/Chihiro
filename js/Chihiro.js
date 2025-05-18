@@ -54,4 +54,43 @@ document.addEventListener('DOMContentLoaded', function() {
         section.classList.add('fade-in');
         observer.observe(section);
     });
+
+    // Chargement dynamique des avis Google (simulation)
+    function loadGoogleReviews() {
+        // En production, vous pourriez utiliser l'API Google Places
+        // Ceci est une simulation avec des données statiques
+        const reviews = [
+                  ];
+
+        const reviewsContainer = document.querySelector('.reviews-container');
+        
+        reviews.forEach(review => {
+            const reviewElement = document.createElement('div');
+            reviewElement.className = 'google-review';
+            
+            // Création des étoiles
+            let stars = '';
+            for (let i = 0; i < 5; i++) {
+                if (i < review.rating) {
+                    stars += '<i class="fas fa-star"></i>';
+                } else {
+                    stars += '<i class="far fa-star"></i>';
+                }
+            }
+
+            reviewElement.innerHTML = `
+                <div class="review-header">
+                    <div class="review-stars">${stars}</div>
+                    <div class="review-author">${review.author}</div>
+                </div>
+                <div class="review-content">"${review.text}"</div>
+                <div class="review-date">${review.date}</div>
+            `;
+            
+            reviewsContainer.appendChild(reviewElement);
+        });
+    }
+
+    // Appel de la fonction pour charger les avis
+    loadGoogleReviews();
 });

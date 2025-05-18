@@ -6,7 +6,7 @@
     <title>Chihiro - Restaurant Japonais Paris</title>
     <link rel="stylesheet" href="css/Chihiro.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Yuji+Syuku&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
@@ -15,7 +15,7 @@
             <div class="restaurant-info">
                 <h1>千尋 <span>Chihiro</span></h1>
                 <p class="phone"><i class="fas fa-phone-alt"></i> 01 43 00 00 199</p>
-                <p class="address"><i class="fas fa-map-marker-alt"></i> 12 rue du Japon, 75000 Paris</p>
+                <p class="address"><a href="https://maps.google.com/?q=12+rue+du+Japon,+75000+Paris" target="_blank"><i class="fas fa-map-marker-alt"></i> 12 rue du Japon, 75000 Paris</a></p>
             </div>
             
             <!-- Navigation Desktop -->
@@ -24,7 +24,7 @@
                     <li><a href="menu.html"><i class="fas fa-utensils"></i> Nos menus</a></li>
                     <li><a href="#reviews"><i class="fas fa-star"></i> Avis</a></li>
                     <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-                    <li><a href="emporter.html"><i class="fas fa-box"></i> À emporter</a></li>
+                    <li><a href="emporter.html"><i class="fas fa-shopping-basket"></i> Livraison</a></li>
                 </ul>
             </nav>
             
@@ -39,8 +39,8 @@
             <ul>
                 <li><a href="menu.html"><i class="fas fa-utensils"></i> Nos menus</a></li>
                 <li><a href="#reviews"><i class="fas fa-star"></i> Nos avis</a></li>
-                <li><a href="#contact"><i class="fas fa-envelope"></i> Nous contacter</a></li>
-                <li><a href="emporter.html"><i class="fas fa-box"></i> À emporter</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="emporter.html"><i class="fas fa-shopping-basket"></i> Livraison</a></li>
             </ul>
         </nav>
     </header>
@@ -63,7 +63,7 @@
                 <h2>Authentique cuisine japonaise<br>à Paris</h2>
                 <div class="hero-buttons">
                     <a href="menu.html" class="btn btn-primary">Découvrir la carte</a>
-                    <a href="#contact" class="btn btn-secondary">Réservation</a>
+                    <a href="emporter.html" class="btn btn-secondary">Livraison à domicile</a>
                 </div>
             </div>
         </div>
@@ -73,20 +73,69 @@
     <section id="reviews" class="section">
         <h2>お客様の声 <span>Nos Avis</span></h2>
         <div class="reviews-container">
-            <!-- Les avis seront ajoutés ici -->
+            <div class="google-reviews">
+                <!-- Widget Google Avis -->
+                <div class="google-review">
+                    <div class="review-header">
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="review-author">Jean D.</div>
+                    </div>
+                    <div class="review-content">
+                        "Un véritable voyage au Japon ! Les sushis sont frais et délicieux, le service est impeccable."
+                    </div>
+                    <div class="review-date">Il y a 2 semaines</div>
+                </div>
+
+                <div class="google-review">
+                    <div class="review-header">
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="review-author">Marie L.</div>
+                    </div>
+                    <div class="review-content">
+                        "Ambiance très agréable et plats authentiques. Le ramen est à tomber ! Je recommande vivement."
+                    </div>
+                    <div class="review-date">Il y a 1 mois</div>
+                </div>
+
+                <div class="google-review">
+                    <div class="review-header">
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="review-author">Thomas P.</div>
+                    </div>
+                    <div class="review-content">
+                        "Meilleur restaurant japonais de Paris ! Les tempuras sont légers et croustillants à souhait."
+                    </div>
+                    <div class="review-date">Il y a 3 semaines</div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="section">
         <h2>連絡先 <span>Contact</span></h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Votre nom" required>
-            <input type="email" placeholder="Votre email" required>
-            <input type="tel" placeholder="Téléphone">
-            <textarea placeholder="Votre message" rows="5" required></textarea>
-            <button type="submit"><i class="fas fa-paper-plane"></i> Envoyer</button>
-        </form>
+        <div class="contact-info">
+            <p><i class="fas fa-phone-alt"></i> <a href="tel:01430000199">01 43 00 00 199</a></p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:contact@chihiro-paris.com">contact@chihiro-paris.com</a></p>
+        </div>
     </section>
 
     <!-- Footer -->

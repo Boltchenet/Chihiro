@@ -9,7 +9,7 @@ body {
     color: #333;
     background-color: #f9f5f0;
     line-height: 1.6;
-    font-family: 'Noto Sans JP', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     position: relative;
 }
 
@@ -48,8 +48,9 @@ header {
     font-size: 2.5rem;
     margin-bottom: 0.3rem;
     color: #fff;
-    font-family: 'Yuji Syuku', serif;
+    font-family: 'Noto Sans JP', sans-serif;
     letter-spacing: 2px;
+    font-weight: 500;
 }
 
 .restaurant-info h1 span {
@@ -59,23 +60,34 @@ header {
 }
 
 .restaurant-info p {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #ccc;
     display: flex;
     align-items: center;
     gap: 8px;
+    margin: 0.3rem 0;
 }
 
 .restaurant-info p i {
     color: #D4AF37;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+}
+
+.restaurant-info a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.restaurant-info a:hover {
+    color: #D4AF37;
 }
 
 /* Navigation Desktop */
 .desktop-nav ul {
     display: flex;
     list-style: none;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .desktop-nav li {
@@ -90,13 +102,13 @@ header {
     padding: 0.5rem 0;
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 0.95rem;
+    gap: 10px;
+    font-size: 1.1rem;
 }
 
 .desktop-nav a i {
     color: #D4AF37;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
 }
 
 .desktop-nav a:hover {
@@ -122,7 +134,7 @@ header {
 .hamburger {
     display: none;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: #fff;
 }
 
@@ -130,7 +142,7 @@ header {
 .mobile-nav {
     display: none;
     background-color: #090909;
-    padding: 1rem 2rem;
+    padding: 1.5rem 2rem;
     border-top: 1px solid #555;
 }
 
@@ -139,22 +151,24 @@ header {
 }
 
 .mobile-nav li {
-    margin: 1.2rem 0;
+    margin: 1.5rem 0;
 }
 
 .mobile-nav a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 15px;
+    font-weight: 500;
 }
 
 .mobile-nav a i {
     color: #D4AF37;
-    width: 20px;
+    width: 25px;
     text-align: center;
+    font-size: 1.2rem;
 }
 
 /* Hero Section */
@@ -208,12 +222,13 @@ header {
 
 .hero-content h2 {
     font-size: 3rem;
-    font-family: 'Yuji Syuku', serif;
+    font-family: 'Noto Sans JP', sans-serif;
     color: #fff;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     margin-bottom: 2rem;
     line-height: 1.3;
     letter-spacing: 1px;
+    font-weight: 500;
 }
 
 .hero-buttons {
@@ -223,12 +238,13 @@ header {
 }
 
 .btn {
-    padding: 0.8rem 1.8rem;
+    padding: 1rem 2.2rem;
     border-radius: 4px;
     font-weight: 500;
     text-decoration: none;
     transition: all 0.3s;
     display: inline-block;
+    font-size: 1.1rem;
 }
 
 .btn-primary {
@@ -268,7 +284,8 @@ header {
     font-size: 2.2rem;
     color: #001F3F;
     position: relative;
-    font-family: 'Yuji Syuku', serif;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 500;
 }
 
 .section h2 span {
@@ -287,51 +304,79 @@ header {
     margin: 1rem auto;
 }
 
-/* Contact Form */
-.contact-form {
+/* Avis Section */
+.reviews-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.google-review {
+    background: #f9f5f0;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.review-stars {
+    color: #D4AF37;
+}
+
+.review-author {
+    font-weight: 500;
+    color: #001F3F;
+}
+
+.review-content {
+    font-style: italic;
+    margin-bottom: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.review-date {
+    font-size: 0.9rem;
+    color: #888;
+    text-align: right;
+}
+
+/* Contact Section */
+.contact-info {
+    text-align: center;
     max-width: 600px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
 }
 
-.contact-form input,
-.contact-form textarea {
-    padding: 1rem;
-    background: rgba(249, 245, 240, 0.8);
-    border: 1px solid #ddd;
-    color: #333;
-    font-family: 'Noto Sans JP', sans-serif;
-    border-radius: 4px;
-    transition: all 0.3s;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: #001F3F;
-    box-shadow: 0 0 0 2px rgba(0, 31, 63, 0.2);
-}
-
-.contact-form button {
-    padding: 1rem;
-    background: #001F3F;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-weight: 500;
-    transition: background 0.3s;
-    border-radius: 4px;
-    font-size: 1rem;
+.contact-info p {
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 15px;
 }
 
-.contact-form button:hover {
-    background: #002A5A;
+.contact-info a {
+    color: #001F3F;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #D4AF37;
+}
+
+.contact-info i {
+    color: #D4AF37;
+    font-size: 1.2rem;
 }
 
 /* Footer */
@@ -354,9 +399,10 @@ footer {
 }
 
 .footer-logo {
-    font-family: 'Yuji Syuku', serif;
+    font-family: 'Noto Sans JP', sans-serif;
     font-size: 2.5rem;
     color: #D4AF37;
+    font-weight: 500;
 }
 
 .footer-social {
@@ -366,7 +412,7 @@ footer {
 
 .footer-social a {
     color: #D4AF37;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     transition: color 0.3s;
 }
 
@@ -428,6 +474,10 @@ footer {
     .section h2 {
         font-size: 1.8rem;
     }
+
+    .mobile-nav.active {
+        display: block;
+    }
 }
 
 @media (max-width: 480px) {
@@ -442,5 +492,10 @@ footer {
     .iphone-map {
         width: 200px;
         height: 350px;
+    }
+
+    .contact-info p {
+        flex-direction: column;
+        gap: 5px;
     }
 }
