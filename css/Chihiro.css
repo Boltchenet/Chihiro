@@ -291,6 +291,80 @@ header {
     margin: 1rem auto;
 }
 
+/* Menu Section */
+.menu-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.menu-category-btn {
+    padding: 0.8rem 1.5rem;
+    background-color: #f9f5f0;
+    border: 2px solid #D4AF37;
+    border-radius: 4px;
+    color: #001F3F;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.menu-category-btn:hover,
+.menu-category-btn.active {
+    background-color: #D4AF37;
+    color: white;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.menu-item {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-item-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.menu-item-info {
+    padding: 1.5rem;
+}
+
+.menu-item-title {
+    font-size: 1.3rem;
+    color: #001F3F;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.menu-item-desc {
+    color: #555;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.menu-item-price {
+    color: #D4AF37;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
 /* Avis Section */
 .reviews-container {
     display: grid;
@@ -364,6 +438,45 @@ header {
 .contact-info i {
     color: #D4AF37;
     font-size: 1.2rem;
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.lightbox-img {
+    max-width: 100%;
+    max-height: 80vh;
+    border: 3px solid white;
+    border-radius: 5px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
 }
 
 /* Footer */
@@ -465,6 +578,10 @@ footer {
     .mobile-nav.active {
         display: block;
     }
+
+    .menu-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
 }
 
 @media (max-width: 480px) {
@@ -484,5 +601,13 @@ footer {
     .contact-info p {
         flex-direction: column;
         gap: 5px;
+    }
+
+    .menu-categories {
+        flex-direction: column;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
     }
 }

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chihiro - Livraison à Paris</title>
+    <link rel="stylesheet" href="css/Chihiro.css">
+    <link rel="stylesheet" href="css/emporter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="restaurant-info">
+                <h1>Chihiro</h1>
+                <p class="phone"><i class="fas fa-phone-alt"></i> 01 43 00 00 199</p>
+                <p class="address"><a href="https://maps.google.com/?q=12+rue+du+Japon,+75000+Paris" target="_blank"><i class="fas fa-map-marker-alt"></i> 12 rue du Japon, 75000 Paris</a></p>
+            </div>
+            
+            <!-- Navigation Desktop -->
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html#menu"><i class="fas fa-utensils"></i> Nos menus</a></li>
+                    <li><a href="index.html#reviews"><i class="fas fa-star"></i> Avis</a></li>
+                    <li><a href="index.html#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <li><a href="emporter.html" class="active"><i class="fas fa-shopping-basket"></i> Livraison</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Menu Hamburger Mobile -->
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        
+        <!-- Navigation Mobile -->
+        <nav class="mobile-nav" id="mobileNav">
+            <ul>
+                <li><a href="index.html#menu"><i class="fas fa-utensils"></i> Nos menus</a></li>
+                <li><a href="index.html#reviews"><i class="fas fa-star"></i> Nos avis</a></li>
+                <li><a href="index.html#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="emporter.html" class="active"><i class="fas fa-shopping-basket"></i> Livraison</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero emporter-hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h2>Commandez vos plats japonais préférés à Paris</h2>
+                <p class="hero-subtitle">Livraison rapide avec Uber Eats et Deliveroo</p>
+                <div class="hero-buttons">
+                    <a href="#uber-eats" class="btn btn-primary">Commander sur Uber Eats</a>
+                    <a href="#deliveroo" class="btn btn-secondary">Commander sur Deliveroo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery Options Section -->
+    <section id="delivery-options" class="section">
+        <h2>Nos services de livraison</h2>
+        
+        <div class="delivery-grid">
+            <div id="uber-eats" class="delivery-option">
+                <div class="delivery-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Uber_Eats_Logo_2018.svg/2560px-Uber_Eats_Logo_2018.svg.png" alt="Uber Eats">
+                </div>
+                <div class="delivery-info">
+                    <h3>Uber Eats</h3>
+                    <p>Commandez vos plats préférés via Uber Eats pour une livraison rapide et fiable.</p>
+                    <a href="https://www.ubereats.com/fr/store/chihiro/XXXXX" target="_blank" class="btn btn-primary">Commander maintenant</a>
+                </div>
+            </div>
+            
+            <div id="deliveroo" class="delivery-option">
+                <div class="delivery-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Deliveroo_logo.svg/2560px-Deliveroo_logo.svg.png" alt="Deliveroo">
+                </div>
+                <div class="delivery-info">
+                    <h3>Deliveroo</h3>
+                    <p>Profitez de nos plats livrés chez vous en moins de 30 minutes avec Deliveroo.</p>
+                    <a href="https://deliveroo.fr/fr/menu/paris/paris/chihiro" target="_blank" class="btn btn-secondary">Commander maintenant</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section">
+        <h2>Questions fréquentes</h2>
+        
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    Quels sont les horaires de livraison ?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Nous livrons du mardi au dimanche, de 11h30 à 14h30 et de 18h30 à 22h30.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    Quel est le délai de livraison moyen ?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Le délai moyen est de 30 à 45 minutes selon votre localisation et l'heure de commande.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    Y a-t-il un minimum de commande ?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Le minimum de commande est de 15€ pour Uber Eats et 12€ pour Deliveroo.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    Puis-je payer en espèces à la livraison ?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Non, toutes les commandes doivent être payées en ligne via les applications Uber Eats ou Deliveroo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Chihiro</div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-tripadvisor"></i></a>
+            </div>
+            <p>Ouvert du mardi au dimanche, 11h30 - 14h30 / 18h30 - 22h30</p>
+        </div>
+        <p class="copyright">&copy; 2023 Chihiro - Tous droits réservés</p>
+    </footer>
+
+    <script src="js/Chihiro.js"></script>
+    <script src="js/emporter.js"></script>
+</body>
+</html>

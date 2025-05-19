@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chihiro - Restaurant Japonais Paris</title>
     <link rel="stylesheet" href="css/Chihiro.css">
+    <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
@@ -21,7 +22,7 @@
             <!-- Navigation Desktop -->
             <nav class="desktop-nav">
                 <ul>
-                    <li><a href="menu.html"><i class="fas fa-utensils"></i> Nos menus</a></li>
+                    <li><a href="#menu"><i class="fas fa-utensils"></i> Nos menus</a></li>
                     <li><a href="#reviews"><i class="fas fa-star"></i> Avis</a></li>
                     <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
                     <li><a href="emporter.html"><i class="fas fa-shopping-basket"></i> Livraison</a></li>
@@ -37,7 +38,7 @@
         <!-- Navigation Mobile -->
         <nav class="mobile-nav" id="mobileNav">
             <ul>
-                <li><a href="menu.html"><i class="fas fa-utensils"></i> Nos menus</a></li>
+                <li><a href="#menu"><i class="fas fa-utensils"></i> Nos menus</a></li>
                 <li><a href="#reviews"><i class="fas fa-star"></i> Nos avis</a></li>
                 <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
                 <li><a href="emporter.html"><i class="fas fa-shopping-basket"></i> Livraison</a></li>
@@ -62,10 +63,25 @@
             <div class="hero-content">
                 <h2>Authentique cuisine japonaise<br>à Paris</h2>
                 <div class="hero-buttons">
-                    <a href="menu.html" class="btn btn-primary">Découvrir la carte</a>
+                    <a href="#menu" class="btn btn-primary">Découvrir la carte</a>
                     <a href="emporter.html" class="btn btn-secondary">Livraison à domicile</a>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section">
+        <h2>Notre Menu</h2>
+        
+        <div class="menu-categories">
+            <button class="menu-category-btn active" data-category="sushi">Sushi</button>
+            <button class="menu-category-btn" data-category="ramen">Ramen</button>
+            <button class="menu-category-btn" data-category="entrees">Entrées</button>
+        </div>
+        
+        <div class="menu-grid">
+            <!-- Contenu chargé dynamiquement par menu.js -->
         </div>
     </section>
 
@@ -73,59 +89,7 @@
     <section id="reviews" class="section">
         <h2>Nos Avis</h2>
         <div class="reviews-container">
-            <div class="google-reviews">
-                <!-- Widget Google Avis -->
-                <div class="google-review">
-                    <div class="review-header">
-                        <div class="review-stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="review-author">Jean D.</div>
-                    </div>
-                    <div class="review-content">
-                        "Un véritable voyage au Japon ! Les sushis sont frais et délicieux, le service est impeccable."
-                    </div>
-                    <div class="review-date">Il y a 2 semaines</div>
-                </div>
-
-                <div class="google-review">
-                    <div class="review-header">
-                        <div class="review-stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <div class="review-author">Marie L.</div>
-                    </div>
-                    <div class="review-content">
-                        "Ambiance très agréable et plats authentiques. Le ramen est à tomber ! Je recommande vivement."
-                    </div>
-                    <div class="review-date">Il y a 1 mois</div>
-                </div>
-
-                <div class="google-review">
-                    <div class="review-header">
-                        <div class="review-stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="review-author">Thomas P.</div>
-                    </div>
-                    <div class="review-content">
-                        "Meilleur restaurant japonais de Paris ! Les tempuras sont légers et croustillants à souhait."
-                    </div>
-                    <div class="review-date">Il y a 3 semaines</div>
-                </div>
-            </div>
+            <!-- Les avis seront chargés dynamiquement par Chihiro.js -->
         </div>
     </section>
 
@@ -152,6 +116,13 @@
         <p class="copyright">&copy; 2023 Chihiro - Tous droits réservés</p>
     </footer>
 
+    <!-- Lightbox -->
+    <div class="lightbox">
+        <span class="lightbox-close"><i class="fas fa-times"></i></span>
+        <img src="" alt="" class="lightbox-content lightbox-img">
+    </div>
+
     <script src="js/Chihiro.js"></script>
+    <script src="js/menu.js"></script>
 </body>
 </html>

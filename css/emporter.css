@@ -1,0 +1,162 @@
+/* emporter.css */
+/* Styles spécifiques à la page de livraison */
+
+/* Hero Section */
+.emporter-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('https://images.unsplash.com/photo-1555244162-803834f70033?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    text-align: center;
+}
+
+.hero-subtitle {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Delivery Options */
+.delivery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.delivery-option {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.delivery-logo {
+    padding: 2rem;
+    background: #f9f5f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+}
+
+.delivery-logo img {
+    max-width: 200px;
+    max-height: 80px;
+    object-fit: contain;
+}
+
+.delivery-info {
+    padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.delivery-info h3 {
+    color: #001F3F;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.delivery-info p {
+    color: #555;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.delivery-info .btn {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+/* FAQ Section */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 1rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 1.5rem;
+    background: #f9f5f0;
+    border: none;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #001F3F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.faq-question:hover {
+    background: #e8e0d5;
+}
+
+.faq-question i {
+    transition: transform 0.3s;
+}
+
+.faq-question.active i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease;
+}
+
+.faq-answer p {
+    padding: 1rem 0;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    padding: 0 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .delivery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .delivery-logo {
+        min-height: 120px;
+    }
+    
+    .delivery-logo img {
+        max-width: 150px;
+    }
+    
+    .delivery-info .btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .faq-question {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}
