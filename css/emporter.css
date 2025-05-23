@@ -130,6 +130,42 @@
     padding: 0 1.5rem;
 }
 
+/* Style pour les boutons de commande */
+.btn-command {
+    background-color: #001F3F;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-family: 'Noto Sans JP', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    margin-top: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn-command:hover {
+    background-color: #003366;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Style des boutons Tripadvisor */
+.tripadvisor-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .delivery-grid {
@@ -158,5 +194,12 @@
     .faq-question {
         font-size: 1rem;
         padding: 1rem;
+    }
+}
+
+@media (min-width: 480px) {
+    .btn-command {
+        width: auto;
+        min-width: 200px;
     }
 }
